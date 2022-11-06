@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lev3_9_project_rock_paper_scissors</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main class="gradient-border" id="box">
+        <form action="#">
+            <section>
+                <h1>ROCK PAPER SCISSORS GAME</h1>
+
+                <h2>How many rounds?</h2>
+
+                <div id="radioContainer">
+                    <input type="radio" id="rounds5" name="rounds" onchange="chooseRounds()">
+                    <label for="rounds5">5</label>
+                    <!-- 10 Runden -->
+                    <input type="radio" id="rounds10" name="rounds" onchange="chooseRounds()">
+                    <label for="rounds10">10</label>
+                    <!-- 15 Runden -->
+                    <input type="radio" id="rounds15" name="rounds" onchange="chooseRounds()">
+                    <label for="rounds15">15</label>
+                    <!-- 20 Runden -->
+                    <input type="radio" id="rounds20" name="rounds" onchange="chooseRounds()">
+                    <label for="rounds20">20</label>
+                </div>
+                <!-- 5 Runden -->
+
+                <h2 id="roundCount"><span id="roundsLeft">0</span> / <span id="choosenNumberOfRounds">0</spanid>
+                </h2>
+            </section>
+
+            <article class="board">
+                <p id="user">USER</p>
+                <p id="score"><span id="scorePlayer">0</span> : <span id="scoreComputer">0</span></p>
+                <p id="comp">COMP</p>
+            </article>
+        </form>
+        <p id="output">Let's Play</p>
+        <!-- rock, paper, scissor buttons -->
+        <div class="options">
+            <button type="button" class="choiceButtons" id="rock" value="rock">Rock</button>
+            <button type="button" class="choiceButtons" id="paper" value="paper">Paper</button>
+            <button type="button" class="choiceButtons" id="scissor" value="scissor">Scissors</button>
+        </div>
+        <h2 id="move">Make your move</h2>
+        <!-- reset button -->
+        <button type="button" id="resetButton">restart</button>
+    </main>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

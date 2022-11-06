@@ -1,0 +1,192 @@
+@font-face {
+    font-family: PressStart;
+    src: url("../fonts/PressStart2P-Regular.ttf");
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url("../fonts/Roboto-Medium.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: RobotoMedium;
+}
+
+body {
+    background-color: #24272e;
+    color: #fff;
+}
+
+#roundCount {
+    display: none;
+}
+
+main form section h1 {
+    text-align: center;
+    font-family: PressStart;
+    font-size: 2rem;
+    color: #07b39b;
+}
+
+main form section h2 {
+    padding: 1rem;
+    text-align: center;
+    color: #5073b8;
+    font-size: 2rem;
+}
+
+#radioContainer {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1em auto 1em auto 1em auto 1em auto;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+
+}
+
+.board {
+    width: 400px;
+    margin: 0 auto;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 2rem;
+}
+
+#user {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transform: translate(-180%, 120%);
+    background-color: tomato;
+}
+
+#comp {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    background-color: tomato;
+    transform: translate(165%, -120%);
+}
+
+#score,
+#score span {
+    font-size: 4rem;
+}
+
+#output {
+    text-align: center;
+    padding: 1rem;
+    font-size: 2.5rem;
+    /* gradient */
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 10s infinite linear;
+}
+
+@keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+.options {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.choiceButtons {
+    padding: 0.6rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border-style: none;
+    background-image: linear-gradient(to right, #2e5881 0%, #44aaba 51%, #2C3E50 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(178, 241, 228);
+}
+
+.choiceButtons:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+#move {
+    text-align: center;
+    padding: 1rem;
+    font-family: PressStart;
+}
+
+#resetButton {
+    display: block;
+    width: auto;
+    margin: 1rem auto;
+    padding: 0.6rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border-style: none;
+    color: #f35626;
+}
+
+/* ---- animated gradient border ----- */
+#box {
+    margin: 2rem auto;
+    width: 600px;
+    height: 90vh;
+    padding: 2rem;
+}
+
+.gradient-border {
+    --borderWidth: 3px;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+}
+
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 10s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ----------------------------------- */
